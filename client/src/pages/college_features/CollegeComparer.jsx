@@ -13,7 +13,7 @@ const CollegeComparer = () => {
 
   useEffect(() => {
     axios
-      .get("https://lakshaya.onrender.com/college")
+      .get("https://lakshaya-backend.onrender.com/college")
       .then((colleges) => setColleges(colleges.data))
       .catch((err) => console.log(err));
   }, []);
