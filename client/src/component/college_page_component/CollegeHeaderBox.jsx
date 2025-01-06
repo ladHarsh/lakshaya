@@ -16,7 +16,7 @@ const CollegeHeaderBox = ({ name }) => {
               {/* Image Column */}
               <div className="col-2 d-flex justify-content-center">
                 <img
-                  src={`https://lakshaya.onrender.com/uploads/titelImg-${encodeURIComponent(
+                  src={`https://lakshaya-backend.onrender.com/uploads/titelImg-${encodeURIComponent(
                     college.Name
                   )}.jpg`}
                   className="img-fluid"
@@ -53,7 +53,7 @@ const CollegeHeaderBox = ({ name }) => {
               <div className="col-2 col-md-2 mt-1 pt-2 d-none d-md-block">
                 <a
                   className="p-2 download-box"
-                  href={`https://lakshaya.onrender.com/uploads/${encodeURIComponent(
+                  href={`https://lakshaya-backend.onrender.com/uploads/${encodeURIComponent(
                     college.Name
                   )}.pdf`}
                   download
@@ -73,7 +73,7 @@ const CollegeHeaderBox = ({ name }) => {
                   {Array.from({ length: 5 }).map((_, index) => (
                     <Carousel.Item key={index}>
                       <img
-                        src={`https://lakshaya.onrender.com/uploads/collegeImg-${encodeURIComponent(
+                        src={`https://lakshaya-backend.onrender.com/uploads/collegeImg-${encodeURIComponent(
                           college.Name
                         )}-${index + 1}.jpeg`}
                         alt={`Slide ${index + 1}`}
@@ -94,7 +94,7 @@ const CollegeHeaderBox = ({ name }) => {
                 {/* Primary Image */}
                 <div className="col-6">
                   <img
-                    src={`https://lakshaya.onrender.com/uploads/collegeImg-${encodeURIComponent(
+                    src={`https://lakshaya-backend.onrender.com/uploads/collegeImg-${encodeURIComponent(
                       college.Name
                     )}-1.jpeg`}
                     alt="Primary"
@@ -113,7 +113,7 @@ const CollegeHeaderBox = ({ name }) => {
                     {Array.from({ length: 4 }).map((_, index) => (
                       <div className="col-6" key={index}>
                         <img
-                          src={`https://lakshaya.onrender.com/uploads/collegeImg-${encodeURIComponent(
+                          src={`https://lakshaya-backend.onrender.com/uploads/collegeImg-${encodeURIComponent(
                             college.Name
                           )}-${index + 2}.jpeg`}
                           alt={`Image ${index + 2}`}
