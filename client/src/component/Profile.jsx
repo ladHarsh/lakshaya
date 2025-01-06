@@ -12,7 +12,7 @@ const Profile = ({ User, setUser }) => {
 
   useEffect(() => {
     axios
-      .get("https://lakshaya.onrender.com/profile")
+      .get("https://lakshaya-backend.onrender.com/profile")
       .then((profile) => setProfile(profile.data))
       .catch((err) => console.log(err));
   }, []);
