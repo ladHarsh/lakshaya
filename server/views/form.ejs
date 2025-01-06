@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>FROM</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: #d5def5">
+    <div class="container">
+      <form
+        class="mt-5"
+        method="post"
+        action="/form"
+        enctype="multipart/form-data"
+      >
+        <div class="heading text-center fs-1 fw-semibold">
+          College Details Form
+        </div>
+        <div class="headers mt-3 p-2 rounded" style="background-color: #ebf1fc">
+          <div class="row g-3">
+            <!-- College Name -->
+            <div class="col-md-6">
+              <label for="collegeName" class="form-label">College Name</label>
+              <input
+                type="text"
+                id="collegeName"
+                class="form-control"
+                name="Name"
+              />
+            </div>
+
+            <!-- College Location -->
+            <div class="col-md-6">
+              <label for="collegeLocation" class="form-label"
+                >College Location</label
+              >
+              <input
+                type="text"
+                id="collegeLocation"
+                class="form-control"
+                name="loc"
+              />
+            </div>
+
+            <!-- College State -->
+            <div class="col-md-6">
+              <label for="collegeState" class="form-label">College State</label>
+              <input
+                type="text"
+                id="collegeState"
+                class="form-control"
+                name="state"
+              />
+            </div>
+
+            <!-- College Tags -->
+            <div class="col-md-6">
+              <label for="collegeTags" class="form-label">College Tags</label>
+              <input
+                type="text"
+                id="collegeTags"
+                class="form-control"
+                name="tag"
+              />
+            </div>
+
+            <!-- College Title Image -->
+            <div class="col-md-6">
+              <label for="collegeTitleImg" class="form-label"
+                >College Title Image</label
+              >
+              <input
+                type="file"
+                id="collegeTitleImg"
+                class="form-control"
+                name="titelImg"
+              />
+            </div>
+
+            <!-- College Images -->
+            <div class="col-md-6">
+              <label for="collegeImages" class="form-label"
+                >College Images</label
+              >
+              <input
+                type="file"
+                id="collegeImages"
+                class="form-control"
+                name="collegeImg"
+                multiple
+              />
+            </div>
+
+            <!-- College Title -->
+            <div class="col-12">
+              <label for="collegeTitle" class="form-label">College Title</label>
+              <textarea
+                id="collegeTitle"
+                class="form-control"
+                name="hedaerTitle"
+                rows="2"
+              ></textarea>
+            </div>
+
+            <!-- Brouch File -->
+            <div class="col-md-6">
+              <label for="brouchFile" class="form-label">Brochure File</label>
+              <input
+                type="file"
+                id="brouchFile"
+                class="form-control"
+                name="brouchFile"
+              />
+            </div>
+
+            <!-- Google Location -->
+            <div class="col-md-6">
+              <label for="googleLocation" class="form-label"
+                >Google Location</label
+              >
+              <input
+                type="text"
+                id="googleLocation"
+                class="form-control"
+                name="googleLocation"
+              />
+            </div>
+
+            <!-- Overview -->
+            <div class="col-12">
+              <label for="overview" class="form-label">Overview</label>
+              <textarea
+                id="overview"
+                class="form-control"
+                name="overview"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <!-- Overview List -->
+            <div class="col-12">
+              <span class="fw-medium d-block text-center mb-3"
+                >Overview List</span
+              >
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="overviewList1" class="form-label">1.</label>
+                  <input
+                    type="text"
+                    id="overviewList1"
+                    class="form-control"
+                    name="overviewList_1"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="overviewList2" class="form-label">2.</label>
+                  <input
+                    type="text"
+                    id="overviewList2"
+                    class="form-control"
+                    name="overviewList_2"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="overviewList3" class="form-label">3.</label>
+                  <input
+                    type="text"
+                    id="overviewList3"
+                    class="form-control"
+                    name="overviewList_3"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="overviewList4" class="form-label">4.</label>
+                  <input
+                    type="text"
+                    id="overviewList4"
+                    class="form-control"
+                    name="overviewList_4"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="overviewList5" class="form-label">5.</label>
+                  <input
+                    type="text"
+                    id="overviewList5"
+                    class="form-control"
+                    name="overviewList_5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Highlights mt-3">
+          <div style="background-color: #ebf1fc" class="p-2 rounded">
+            <div class="text-center fs-5 fw-semibold mb-3">Highlights</div>
+            <div class="row g-3">
+              <!-- Established -->
+              <div class="col-md-4">
+                <label for="established" class="form-label">Established</label>
+                <input
+                  type="text"
+                  id="established"
+                  class="form-control"
+                  name="established"
+                />
+              </div>
+
+              <!-- Campus Area -->
+              <div class="col-md-4">
+                <label for="campusArea" class="form-label">Campus Area</label>
+                <input
+                  type="text"
+                  id="campusArea"
+                  class="form-control"
+                  name="campus"
+                />
+              </div>
+
+              <!-- Type -->
+              <div class="col-md-4">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" id="type" class="form-control" name="type" />
+              </div>
+
+              <!-- Motto -->
+              <div class="col-md-4">
+                <label for="motto" class="form-label">Motto</label>
+                <input
+                  type="text"
+                  id="motto"
+                  class="form-control"
+                  name="motto"
+                />
+              </div>
+
+              <!-- President -->
+              <div class="col-md-4">
+                <label for="president" class="form-label">President</label>
+                <input
+                  type="text"
+                  id="president"
+                  class="form-control"
+                  name="president"
+                />
+              </div>
+
+              <!-- Director -->
+              <div class="col-md-4">
+                <label for="director" class="form-label">Director</label>
+                <input
+                  type="text"
+                  id="director"
+                  class="form-control"
+                  name="director"
+                />
+              </div>
+
+              <!-- Affiliated To -->
+              <div class="col-md-4">
+                <label for="affiliatedTo" class="form-label"
+                  >Affiliated To</label
+                >
+                <input
+                  type="text"
+                  id="affiliatedTo"
+                  class="form-control"
+                  name="affiliatedTo"
+                />
+              </div>
+
+              <!-- Application Mode -->
+              <div class="col-md-4">
+                <label for="applicationMode" class="form-label"
+                  >Application Mode</label
+                >
+                <input
+                  type="text"
+                  id="applicationMode"
+                  class="form-control"
+                  name="applicationMode"
+                />
+              </div>
+
+              <!-- Admission Via -->
+              <div class="col-md-4">
+                <label for="admissionVia" class="form-label"
+                  >Admission Via</label
+                >
+                <input
+                  type="text"
+                  id="admissionVia"
+                  class="form-control"
+                  name="admissionVia"
+                />
+              </div>
+
+              <!-- Official Website -->
+              <div class="col-12">
+                <label for="officialWebsite" class="form-label"
+                  >Official Website</label
+                >
+                <input
+                  type="text"
+                  id="officialWebsite"
+                  class="form-control"
+                  name="officialWebsite"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container mt-4 p-3 rounded"
+          style="background-color: #ebf1fc"
+        >
+          <div class="video-links mb-3 text-center fs-5 fw-semibold">
+            Video Links
+          </div>
+          <div class="row mt-3 mb-3">
+            <div class="d-flex justify-content-evenly flex-wrap">
+              <!-- Video 1 -->
+              <div class="col-md-3 mb-3">
+                <label for="video_1" class="form-label">Video Link 1</label>
+                <input
+                  type="text"
+                  id="video_1"
+                  class="form-control"
+                  name="video_1"
+                  placeholder="Enter video URL"
+                />
+              </div>
+              <!-- Video 2 -->
+              <div class="col-md-3 mb-3">
+                <label for="video_2" class="form-label">Video Link 2</label>
+                <input
+                  type="text"
+                  id="video_2"
+                  class="form-control"
+                  name="video_2"
+                  placeholder="Enter video URL"
+                />
+              </div>
+              <!-- Video 3 -->
+              <div class="col-md-3 mb-3">
+                <label for="video_3" class="form-label">Video Link 3</label>
+                <input
+                  type="text"
+                  id="video_3"
+                  class="form-control"
+                  name="video_3"
+                  placeholder="Enter video URL"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container p-4 rounded mt-3"
+          style="background-color: #f8f9fa; border: 1px solid #dee2e6"
+        >
+          <div class="text-center mb-4 fs-4 fw-semibold">
+            Courses and Branch
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <% for (let i = 1; i <= 5; i++) { %>
+              <div class="branch-section border rounded p-3 mb-4">
+                <label class="fw-semibold mb-2 d-block"
+                  >Branch <%= i %>: Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  name="branchName_<%= i %>"
+                  placeholder="Enter Branch Name"
+                />
+
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label">Eligible</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="branchName_<%= i %>_eligible"
+                      placeholder="Eligibility"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Criteria</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="branchName_<%= i %>_criteria"
+                      placeholder="Criteria"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Duration</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="branchName_<%= i %>_duration"
+                      placeholder="Duration"
+                    />
+                  </div>
+                </div>
+
+                <div class="row g-3 mt-3">
+                  <div class="col-md-4">
+                    <label class="form-label">Tuition Fees</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="branchName_<%= i %>_tuitionFees"
+                      placeholder="Tuition Fees"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Exam</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="branchName_<%= i %>_exam"
+                      placeholder="Exam Details"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Hostel Fees</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="branchName_<%= i %>_hostelFees"
+                      placeholder="Hostel Fees"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label class="form-label">One Time Fees</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="branchName_<%= i %>_oneTimeFees"
+                    placeholder="One Time Fees"
+                  />
+                </div>
+
+                <div
+                  class="courses-section mt-4 border rounded p-3"
+                  style="background-color: #e9ecef"
+                >
+                  <% for (let j = 1; j <= 5; j++) { %>
+                  <div class="row g-3 align-items-center mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label text-primary fw-bold"
+                        >Course <%= j %></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="branchName_<%= i %>_coursesName_<%= j %>"
+                        placeholder="Course Name"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Seats</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_seat"
+                        placeholder="Number of Seats"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+                  <% if (i===1) { %>
+
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <label class="form-label">EWS Cutoff 2024</label>
+                      <input
+                        type="number"
+                        class="form-control form-control-sm"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_gujcet_cutoff_2024_EWS"
+                        placeholder="EWS Cutoff"
+                        min="0"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">General Cutoff 2024</label>
+                      <input
+                        type="number"
+                        class="form-control form-control-sm"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_gujcet_cutoff_2024_General"
+                        placeholder="General Cutoff"
+                        min="0"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">SC Cutoff 2024</label>
+                      <input
+                        type="number"
+                        class="form-control form-control-sm"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_gujcet_cutoff_2024_SC"
+                        placeholder="SC Cutoff"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row g-3 mt-2">
+                    <div class="col-md-4">
+                      <label class="form-label">SEBC Cutoff 2024</label>
+                      <input
+                        type="number"
+                        class="form-control form-control-sm"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_gujcet_cutoff_2024_SEBC"
+                        placeholder="SEBC Cutoff"
+                        min="0"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">ST Cutoff 2024</label>
+                      <input
+                        type="number"
+                        class="form-control form-control-sm"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_gujcet_cutoff_2024_ST"
+                        placeholder="ST Cutoff"
+                        min="0"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">TFWS Cutoff 2024</label>
+                      <input
+                        type="number"
+                        class="form-control form-control-sm"
+                        name="branchName_<%= i %>_coursesName_<%= j %>_gujcet_cutoff_2024_TFWS"
+                        placeholder="TFWS Cutoff"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+                  <% } %> <% } %>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="admission mt-3 mb-3 p-4 rounded"
+          style="background-color: #ebf1fc"
+        >
+          <div class="text-center fs-5 fw-semibold mb-4">Admission</div>
+
+          <div class="row">
+            <!-- Admission Paragraph -->
+            <div class="col-12 mb-4">
+              <label class="form-label fw-semibold">Admission Paragraph</label>
+              <textarea
+                class="form-control"
+                name="admissionParagraph"
+                rows="4"
+                placeholder="Enter details about the admission process here..."
+              ></textarea>
+            </div>
+
+            <!-- Steps to Apply -->
+            <div class="col-12">
+              <div
+                class="steps-to-apply p-4 rounded"
+                style="background-color: #d9e8fb"
+              >
+                <div class="text-center fw-medium fs-6 mb-3">
+                  Steps to Apply
+                </div>
+                <div class="row g-3">
+                  <% for (let step = 1; step <= 6; step++) { %>
+                  <!-- Change '5' to desired number of steps -->
+                  <div class="col-12">
+                    <label class="form-label">Step <%= step %></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="step_<%= step %>"
+                      placeholder="Enter Step <%= step %>"
+                    />
+                  </div>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="placement mt-3 mb-3 p-3 rounded"
+          style="background-color: #ebf1fc; padding: 20px"
+        >
+          <div class="mb-3 text-center fs-5 fw-semibold">Placement</div>
+          <div class="row mt-3">
+            <div class="mb-3 col-12">
+              <label for="palcementParagraph">Placement paragraph</label>
+              <textarea
+                id="palcementParagraph"
+                class="form-control col-10 mx-auto"
+                name="palcementParagraph"
+              ></textarea>
+            </div>
+            <div class="mb-3 row d-flex justify-content-evenly">
+              <div class="mb-3 col-2">
+                <label for="highestPackage">Highest CTC</label>
+                <input
+                  type="text"
+                  class="form-control col-6 mx-auto"
+                  name="highestPackage"
+                />
+              </div>
+              <div class="mb-3 col-2">
+                <label for="averagePackage">Average CTC</label>
+                <input
+                  type="text"
+                  class="form-control col-6 mx-auto"
+                  name="averagePackage"
+                />
+              </div>
+              <div class="mb-3 col-4">
+                <label for="numberOfPalce">No. of Students Placed</label>
+                <input
+                  type="text"
+                  class="form-control col-7 mx-auto"
+                  name="numberOfPalce"
+                />
+              </div>
+              <div class="mb-3 col-4">
+                <label for="offers">Super Dream Offers</label>
+                <input
+                  type="text"
+                  class="form-control col-7 mx-auto"
+                  name="offers"
+                />
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <label for="recruiters">Top Recruiters</label>
+              <textarea
+                id="recruiters"
+                class="form-control col-10 mx-auto"
+                name="recruiters"
+              ></textarea>
+            </div>
+            <div class="mb-3 row d-flex justify-content-evenly">
+              <div class="mb-3 col-4">
+                <label for="medianPackage2023">Median package 2023</label>
+                <input
+                  type="text"
+                  class="form-control col-6 mx-auto"
+                  name="medianPackage2023"
+                />
+              </div>
+              <div class="mb-3 col-4">
+                <label for="noOfCompaniesVisited">Companies Visited</label>
+                <input
+                  type="text"
+                  class="form-control col-6 mx-auto"
+                  name="noOfCompaniesVisited"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="scholarships mt-3 mb-3 p-3 rounded"
+          style="background-color: #ebf1fc; padding: 20px"
+        >
+          <div class="mb-3 text-center fs-5 fw-semibold">Scholarships</div>
+          <div class="row mt-3 mb-3 ms-2">
+            <% for (let i = 1; i <= 5; i++) { %>
+            <!-- Change '5' to the desired number of scholarship entries -->
+            <div class="schoharship-list col-12 mb-3">
+              <label for="scholarshiplistName_<%= i %>"
+                ><%= i %>. List-Name</label
+              >
+              <input
+                type="text"
+                class="form-control col-3 mx-auto"
+                name="scholarshiplistName_<%= i %>"
+              />
+              <label for="scholarshiplistContent_<%= i %>">Content</label>
+              <textarea
+                id="scholarshiplistContent_<%= i %>"
+                class="form-control col-7 mx-auto"
+                name="scholarshiplistContent_<%= i %>"
+              ></textarea>
+            </div>
+            <% } %>
+          </div>
+        </div>
+
+        <div
+          class="facilities mt-3 mb-3 p-3 rounded"
+          style="background-color: #ebf1fc; padding: 20px"
+        >
+          <div class="mb-3 text-center fs-5 fw-semibold">Facilities</div>
+          <div class="row mt-3 ms-2 mb-3">
+            <% for (let i = 1; i <= 5; i++) { %>
+            <!-- Change '5' to the desired number of facilities -->
+            <div class="facility-list col-12 mb-3">
+              <label for="facilitiesName_<%= i %>"
+                ><%= i %>. Facilities-Name</label
+              >
+              <input
+                type="text"
+                id="facilitiesName_<%= i %>"
+                class="form-control col-3 mx-auto"
+                name="facilitiesName_<%= i %>"
+              />
+              <label for="facilitiesContent_<%= i %>">Content</label>
+              <textarea
+                id="facilitiesContent_<%= i %>"
+                class="form-control col-7 mx-auto"
+                name="facilitiesContent_<%= i %>"
+              ></textarea>
+            </div>
+            <% } %>
+          </div>
+        </div>
+
+        <div
+          class="faculty mt-3 mb-3 p-3 rounded"
+          style="background-color: #ebf1fc; padding: 20px"
+        >
+          <div class="mb-3 text-center fs-5 fw-semibold">Faculty</div>
+          <div class="row">
+            <div class="col-12 mx-auto mb-3">
+              <label for="facultyContent">content</label>
+              <textarea
+                id="facultyContent"
+                class="form-control col-10 mx-auto"
+                name="content"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="faculty mt-3 mb-3 p-3 rounded"
+          style="background-color: #ebf1fc; padding: 20px"
+        >
+          <div class="mb-3 text-center fs-5 fw-semibold">Table of Content</div>
+          <div class="row">
+            <div class="col-12 mx-auto mb-3">
+              <label for="tableContent">list</label>
+              <input
+                type="text"
+                id="tableContent"
+                class="form-control col-10 mx-auto"
+                name="tableContent"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid gap-2 col-4 mx-auto mb-5">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
