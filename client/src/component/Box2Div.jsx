@@ -8,7 +8,7 @@ const Box2Div = (name) => {
 
   useEffect(() => {
     axios
-      .get("https://lakshaya.onrender.com/college")
+      .get("https://lakshaya-backend.onrender.com/college")
       .then((colleges) => setColleges(colleges.data))
       .catch((err) => console.log(err));
   }, []);
@@ -24,7 +24,7 @@ const Box2Div = (name) => {
           <div className="row h-100">
             <div className="college-img ms-2">
               <img
-                src={`https://lakshaya.onrender.com/uploads/titelImg-${encodeURIComponent(
+                src={`https://lakshaya-backend.onrender.com/uploads/titelImg-${encodeURIComponent(
                   item.Name
                 )}.jpg`}
                 className="card-img-top  w-100"
