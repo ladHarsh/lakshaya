@@ -64,7 +64,7 @@ const AboutUs = () => {
                   </div>
 
                   {/* Text */}
-                  <div className="col-12 col-md-6 text-center text-md-start mt-3 mt-md-0">
+                  <div className="col-12 col-md-6 text-md-start mt-3 mt-md-0">
                     <h5>Harsh Lad</h5>
                     <p>Full Stack Developer</p>
                     <p>
