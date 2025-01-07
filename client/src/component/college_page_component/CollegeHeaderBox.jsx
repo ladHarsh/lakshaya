@@ -14,7 +14,7 @@ const CollegeHeaderBox = ({ name }) => {
           <div className="mt-4">
             <div className="row pt-2">
               {/* Image Column */}
-              <div className="col-2 d-flex justify-content-center">
+              <div className="col-4 col-md-2 d-flex justify-content-center">
                 <img
                   src={`https://lakshaya-backend.onrender.com/uploads/titelImg-${encodeURIComponent(
                     college.Name
@@ -26,7 +26,7 @@ const CollegeHeaderBox = ({ name }) => {
               </div>
 
               {/* Content Column */}
-              <div className="col-8">
+              <div className="col-8 col-md-8">
                 <p className="fs-4 fs-md-2 fw-semibold">
                   {college.hedaerTitle}
                 </p>
@@ -50,7 +50,7 @@ const CollegeHeaderBox = ({ name }) => {
               </div>
 
               {/* For smaller screens, hide the download, apply, and rating sections */}
-              <div className="col-2 col-md-2 mt-1 pt-2 d-none d-md-block">
+              <div className="col-3 col-md-2 mt-1 pt-2 d-none d-md-block d-sm-none">
                 <a
                   className="p-2 download-box"
                   href={`https://lakshaya-backend.onrender.com/uploads/${encodeURIComponent(
