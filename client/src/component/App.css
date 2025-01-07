@@ -1145,3 +1145,19 @@ h2 {
   }
 }
 
+/* Make the list scrollable on small screens */
+@media (max-width: 449px) {
+  .nav-wrapper {
+    overflow-x: auto; /* Make the list horizontally scrollable */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+  }
+
+  .nav-pills {
+    display: flex; /* Flexbox for horizontal alignment */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+  }
+
+  .nav-item {
+    flex: 0 0 auto; /* Ensure the list items don't shrink or stretch */
+  }
+}
