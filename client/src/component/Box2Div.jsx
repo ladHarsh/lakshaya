@@ -5,14 +5,33 @@ import CollegePage from "../pages/CollegePage";
 
 const Box2Div = (name) => {
   const [colleges, setColleges] = useState([]);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
+    // Fetch colleges data
     axios
       .get("https://lakshaya-backend.onrender.com/college")
       .then((colleges) => setColleges(colleges.data))
       .catch((err) => console.log(err));
+
+    // Check screen size
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 386);
+    };
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
-  const findCollege = colleges.filter((college) => college.Name == name.name);
+
+  const findCollege = colleges.filter((college) => college.Name === name.name);
 
   return (
     <>
@@ -21,18 +40,22 @@ const Box2Div = (name) => {
           className="card text-bg-light mb-3 box-1-college-box"
           style={{ width: "23rem" }}
         >
-          <div className="row h-100">
+          <div className="row h-100 d-flex justify-content-center">
             <div className="college-img ms-2">
               <img
                 src={`https://lakshaya-backend.onrender.com/uploads/titelImg-${encodeURIComponent(
                   item.Name
                 )}.jpg`}
-                className="card-img-top  w-100"
+                className="card-img-top w-100"
                 alt="Image"
-                style={{ height: "60%" }}
+                style={{ height: "70%" }}
               />
             </div>
-            <div className="col-8 card-right-body">
+            <div
+              className={`${
+                isSmallScreen ? "col-11" : "col-8"
+              } card-right-body`}
+            >
               <div className="card-body college-info pt-2 w-100">
                 <h5 className="card-title w-100">{item.Name}</h5>
                 <p className="card-text college-location">
@@ -52,7 +75,7 @@ const Box2Div = (name) => {
                   Learn More
                 </a>
                 <Routes>
-                  <Route path="/college/:id" element={<CollegePage />}></Route>
+                  <Route path="/college/:id" element={<CollegePage />} />
                 </Routes>
               </div>
             </div>
